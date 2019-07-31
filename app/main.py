@@ -1,4 +1,4 @@
-from snake import config, logger, telegram
+from snake import config, logger, telegram.ext
 
 updater = telegram.ext.Updater(config.bot.token)
 
