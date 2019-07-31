@@ -14,4 +14,4 @@ def hello(bot, update):
     update.message.reply_text('Hello {}'.format(update.message.from_user.first_name))
 
 
-dp.add_handler(ext.CommandHandler('hello', hello))
+dp.add_handler(ext.MessageHandler('hello', hello))
