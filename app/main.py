@@ -15,7 +15,7 @@ dp = updater.dispatcher
 def hello(bot, update):
     print(update)
     
-    bot.send_message(update.message.from_user.chat_id, 'you said {}'.format(update.message.text))
+    bot.send_message(update.message.from_user.id, 'you said {}'.format(update.message.text))
 
 
 
