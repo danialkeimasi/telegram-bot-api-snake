@@ -13,5 +13,8 @@ dp = updater.dispatcher
 def hello(bot, update):
     update.message.reply_text('Hello {}'.format(update.message.from_user.first_name))
 
+    print(type(bot), dir(bot), bot)
+    print(type(update), dir(update), update)
 
-dp.add_handler(ext.MessageHandler('hello', hello))
+
+dp.add_handler(ext.MessageHandler(ext.Filters.text, hello))
