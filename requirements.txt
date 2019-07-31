@@ -3,3 +3,4 @@ peewee
 pyyaml
 attrdict
 colorlog
+watchgod
