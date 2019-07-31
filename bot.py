@@ -9,6 +9,7 @@ updater.idle()
 
 
 def run():
+    print('restarting')
     os.execv(sys.executable, ['python'] + sys.argv)
 
 run_process('./', run)
