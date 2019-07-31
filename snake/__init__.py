@@ -1,5 +1,5 @@
 from .page import *
-from .logger import logger
+from .logger import logger, logging
 
 import yaml
 import attrdict

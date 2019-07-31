@@ -1,5 +1,5 @@
 
-from snake import config, logger
+from snake import config, logger, logging
 from telegram.ext import Updater, CommandHandler
 
 logger.setLevel(logging.INFO)
