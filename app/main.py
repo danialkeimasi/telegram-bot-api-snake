@@ -2,6 +2,7 @@
 from snake import config, logger
 from telegram.ext import Updater, CommandHandler
 
+logger.setLevel(logging.INFO)
 updater = Updater(config.bot.token)
 
 

@@ -9,7 +9,6 @@ logging.basicConfig(
     datefmt='%y-%b-%d %H:%M:%S',
     format='%(levelname)8s:[%(asctime)s][%(filename)20s:%(lineno)4s -%(funcName)20s() ]: %(message)s',
 
-    level=logging.DEBUG,
     handlers=[
         stream_handler,
     ]
