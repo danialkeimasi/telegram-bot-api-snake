@@ -13,4 +13,5 @@ def run():
     os.execv(sys.executable, ['python3'] + sys.argv)
 
 run_process('./', run)
-# harhar
+run_process('./snake/', run)
+run_process('./app/', run)
