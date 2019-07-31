@@ -10,7 +10,7 @@ updater.idle()
 
 def run():
     print('restarting')
-    os.execv(sys.executable, ['python3'] + sys.argv)
+    os.execv(sys.executable, ['python3.6'] + sys.argv)
 
 
 run_process('./', run)
