@@ -16,4 +16,3 @@ def run():
 run_process('./', run)
 run_process('./snake/', run)
 run_process('./app/', run)
-
