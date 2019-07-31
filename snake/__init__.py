@@ -1,6 +1,6 @@
 from .page import *
 from .logger import logger
-import telegram.ext
+
 import yaml
 import attrdict
 
