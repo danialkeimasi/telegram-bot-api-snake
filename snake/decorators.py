@@ -1,8 +1,11 @@
+from telegram import ChatAction
 from functools import wraps
+
 import yaml
 import attrdict
 
 config = attrdict.AttrDict(yaml.safe_load(open("./config.yml", 'r')))
+
 
 def send_action(action):
     """Sends `action` while processing func command."""
@@ -27,3 +30,18 @@ def admin_only(func):
 
         return func(bot, update, *args, **kwargs)
     return wrapped
+
+
+send_typing_action = send_action(ChatAction.TYPING)
+send_upload_video_action = send_action(ChatAction.UPLOAD_VIDEO)
+send_upload_photo_action = send_action(ChatAction.UPLOAD_PHOTO)
+
+# FIND_LOCATION
+# RECORD_AUDIO
+# RECORD_VIDEO
+# RECORD_VIDEO_NOTE
+# UPLOAD_AUDIO
+# UPLOAD_DOCUMENT
+# UPLOAD_PHOTO
+# UPLOAD_VIDEO
+# UPLOAD_VIDEO_NOTE
