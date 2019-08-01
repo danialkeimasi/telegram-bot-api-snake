@@ -1,2 +1,5 @@
 bot:
   token: 869742149:AAFceL3S-AlQQwR7FhrD5rfe2oN8NsX-o34
+  admins:
+    - chat_id1
+    - chat_id2
