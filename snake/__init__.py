@@ -1,7 +1,7 @@
 from .page import *
 from .logger import logger, logging
 from .decorators import *
-from telegram import *
+from telegram import ext, ChatAction, KeyboardButton, InlineKeyboardButton
 
 
 import yaml
