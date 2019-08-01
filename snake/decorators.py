@@ -9,8 +9,8 @@ def send_action(action):
 
     def decorator(func):
         @wraps(func)
-        def command_func(update, context, *args, **kwargs):
-            context.bot.send_chat_action(chat_id=update.effective_message.chat_id, action=action)
+        def command_func(bot, update *args, **kwargs):
+            bot.send_chat_action(chat_id=update.effective_message.chat_id, action=action)
 
             return func(update, context,  *args, **kwargs)
         return command_func
@@ -19,7 +19,7 @@ def send_action(action):
 
 def admin_only(func):
     @wraps(func)
-    def wrapped(update, context, *args, **kwargs):
+    def wrapped(bot, update, *args, **kwargs):
         user_id = update.effective_user.id
         if user_id not in config.bot.admins:
             print("Unauthorized access denied for {}.".format(user_id))
