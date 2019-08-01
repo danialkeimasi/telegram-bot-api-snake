@@ -6,7 +6,7 @@ import attrdict
 config = attrdict.AttrDict(yaml.safe_load(open("./config.yml", 'r')))
 
 
-updater = ext.Updater(config.bot.token)
+updater = ext.Updater(config.bot.token, use_context=True)
 
 for handler in HANDLERS:
     updater.dispatcher.add_handler(handler)
