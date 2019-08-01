@@ -2,7 +2,7 @@
 # you can read this docs for writing bot
 # handler refrence : https://python-telegram-bot.readthedocs.io/en/stable/telegram.ext.html
 
-from snake import config, logger, updater, logging, send_action, handler, ChatAction
+from snake import config, logger, updater, logging, send_action, ChatAction
 
 logger.setLevel(logging.INFO)
 
