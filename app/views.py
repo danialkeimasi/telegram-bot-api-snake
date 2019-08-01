@@ -7,5 +7,4 @@ from .pages import main_page
 
 @send_action(ChatAction.TYPING)
 def hello(bot, update):
-    print(main_page.markup)
-    bot.send_message(update.message.from_user.id, main_page.text, )
+    bot.send_message(update.message.from_user.id, main_page.text, reply_markup=main_page.markup)
