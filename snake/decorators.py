@@ -12,7 +12,7 @@ def send_action(action):
         def command_func(bot, update, *args, **kwargs):
             bot.send_chat_action(chat_id=update.effective_message.chat_id, action=action)
 
-            return func(update, context,  *args, **kwargs)
+            return func(bot, update,  *args, **kwargs)
         return command_func
     return decorator
 
@@ -25,5 +25,5 @@ def admin_only(func):
             print("Unauthorized access denied for {}.".format(user_id))
             return
 
-        return func(update, context, *args, **kwargs)
+        return func(bot, update, *args, **kwargs)
     return wrapped
