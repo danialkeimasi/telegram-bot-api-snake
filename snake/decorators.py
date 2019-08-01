@@ -9,7 +9,7 @@ def send_action(action):
 
     def decorator(func):
         @wraps(func)
-        def command_func(bot, update *args, **kwargs):
+        def command_func(bot, update, *args, **kwargs):
             bot.send_chat_action(chat_id=update.effective_message.chat_id, action=action)
 
             return func(update, context,  *args, **kwargs)
