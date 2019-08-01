@@ -2,7 +2,7 @@ import os
 import sys
 
 from watchgod import run_process
-from app.main import updater
+from snake import updater
 
 updater.start_polling()
 updater.idle()
