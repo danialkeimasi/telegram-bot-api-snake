@@ -6,12 +6,14 @@ from pprint import pprint
 from snake import config, logger, logging
 from telegram import ext
 
+from snake import send_action
+from telegram import ChatAction
 
 logger.setLevel(logging.INFO)
 updater = ext.Updater(config.bot.token)
 dp = updater.dispatcher
 
-
+@send_action(ChatAction.TYPING)
 def hello(bot, update):
     print(update)
 
