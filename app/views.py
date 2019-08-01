@@ -7,4 +7,4 @@ from .pages import main_page
 
 @send_action(ChatAction.TYPING)
 def hello(bot, update):
-    bot.send_message(update.message.from_user.id, main_page.text, reply_markup=main_page.remove_keyboard())
+    bot.send_message(update.message.from_user.id, main_page.text, reply_markup=main_page.markup)
