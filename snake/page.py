@@ -16,7 +16,7 @@ def build_menu(buttons, n_cols, header_buttons, footer_buttons):
 class Page:
 
     def __init__(self, text,
-                    botton_list=None, header_buttons=None, footer_buttons=None,
+                    botton_list=[], header_buttons=[], footer_buttons=[],
                     n_cols=2): # 'simple' or 'inline'
         self.text = text
         self.botton_list = botton_list
