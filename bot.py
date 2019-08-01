@@ -2,7 +2,8 @@ import os
 import sys
 
 from watchgod import run_process
-from snake import updater, logger, logging
+from snake.telebot import updater
+from snake import logger, logging
 
 logger.setLevel(logging.INFO)
 
