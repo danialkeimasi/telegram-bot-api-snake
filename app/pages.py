@@ -1,3 +1,4 @@
+
 from snake import Page, InlineKeyboardButton, KeyboardButton
 
 main_page = Page(
