@@ -15,7 +15,7 @@ dp = updater.dispatcher
 def hello(bot, update):
     print(update)
 
-    bot.send_message(update.message.from_user.id, 'you are such a bith: {}'.format(update.message.text))
+    bot.send_message(update.message.from_user.id, 'you are such a guy: {}'.format(update.message.text))
 
 
 dp.add_handler(ext.MessageHandler(ext.Filters.text, hello))
