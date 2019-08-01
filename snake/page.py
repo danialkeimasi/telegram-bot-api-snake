@@ -28,7 +28,7 @@ class Page:
     @property
     def markup(self):
         if self.type == 'simple':
-            return telegram.ReplyKeyboardMarkup(build_menu(self.botton_list, n_cols=self.n_cols, self.header_buttons, self.footer_buttons))
+            return telegram.ReplyKeyboardMarkup(build_menu(self.botton_list, self.n_cols, self.header_buttons, self.footer_buttons))
         else:
-            return telegram.InlineKeyboardMarkup(build_menu(self.botton_list, n_cols=self.n_cols, self.header_buttons, self.footer_buttons))
+            return telegram.InlineKeyboardMarkup(build_menu(self.botton_list, self.n_cols, self.header_buttons, self.footer_buttons))
 
