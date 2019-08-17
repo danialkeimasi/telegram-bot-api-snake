@@ -1,8 +1,12 @@
+import json
+from pprint import pprint
+
 from functools import wraps
 
 import attrdict
 import yaml
 from telegram import ChatAction
+from .logger import logger
 
 config = attrdict.AttrDict(yaml.safe_load(open("./config.yml", 'r')))
 
@@ -34,6 +38,14 @@ def admin_only(func):
 
     return wrapped
 
+
+def debug(func):
+    @wraps(func)
+    def wrapped(bot, update, *args, **kwargs):
+        logger.debug(str(update))
+        return func(bot, update, *args, **kwargs)
+
+    return wrapped
 
 send_typing_action = send_action(ChatAction.TYPING)
 send_upload_video_action = send_action(ChatAction.UPLOAD_VIDEO)
