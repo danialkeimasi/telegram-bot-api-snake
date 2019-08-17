@@ -4,6 +4,7 @@ from snake.telebot import updater
 logger.setLevel(logging.DEBUG)
 
 updater.start_polling()
+logger.critical('service started ...')
 updater.idle()
 
 # def run():
