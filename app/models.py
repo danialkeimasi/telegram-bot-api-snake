@@ -1,3 +1,2 @@
-
 from snake import models
 

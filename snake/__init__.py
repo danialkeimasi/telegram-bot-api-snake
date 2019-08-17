@@ -1,8 +1,9 @@
 from .page import *
 from .logger import logger, logging
 from .decorators import *
-from telegram import ext, ChatAction, KeyboardButton, InlineKeyboardButton
+from .tools import is_authenticated
 
+from telegram import ext, ChatAction, KeyboardButton, InlineKeyboardButton
 
 import yaml
 import attrdict
