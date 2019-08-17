@@ -1,9 +1,9 @@
-from snake import send_action, ChatAction, is_authenticated
-from snake.decorators import debug
+from snake import ChatAction, is_authenticated
+from snake.decorators import debug, send_action
 from . import pages
 
-@debug
+
 @send_action(ChatAction.TYPING)
 def hello(bot, update):
     test = is_authenticated(bot, '@danidev', update.message.from_user.id)
-    bot.send_message(update.message.from_user.id, **pages.main_page.send_message)
+    update.message.reply_text(**pages.main_page.text_remove_keyboard)

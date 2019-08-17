@@ -39,19 +39,29 @@ class Page:
 
         return None
 
-    @staticmethod
-    def remove_keyboard():
-        return ReplyKeyboardRemove()
+    @property
+    def text_remove_keyboard(self):
+        return {
+            'text': self.text,
+            'reply_markup': ReplyKeyboardRemove()
+        }
 
     @property
-    def send_message(self):
+    def caption_remove_keyboard(self):
+        return {
+            'text': self.text,
+            'reply_markup': ReplyKeyboardRemove()
+        }
+
+    @property
+    def text_markup(self):
         return {
             'text': self.text,
             'reply_markup': self.markup
         }
 
     @property
-    def send_others(self):
+    def caption_markup(self):
         return {
             'caption': self.text,
             'reply_markup': self.markup
