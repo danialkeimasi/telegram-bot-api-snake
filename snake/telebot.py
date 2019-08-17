@@ -1,10 +1,10 @@
+import attrdict
+import yaml
 from telegram import ext
+
 from app.hanlders import HANDLERS
 
-import yaml
-import attrdict
 config = attrdict.AttrDict(yaml.safe_load(open("./config.yml", 'r')))
-
 
 updater = ext.Updater(config.bot.token)
 

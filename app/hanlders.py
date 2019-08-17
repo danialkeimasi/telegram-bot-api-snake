@@ -4,7 +4,6 @@
 from snake import ext
 from . import views
 
-
 HANDLERS = [
     ext.MessageHandler(ext.Filters.text, views.hello)
 ]

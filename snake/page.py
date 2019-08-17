@@ -1,9 +1,8 @@
-from telegram import KeyboardButton, InlineKeyboardButton, ReplyKeyboardRemove
 import telegram
+from telegram import KeyboardButton, InlineKeyboardButton, ReplyKeyboardRemove
 
 
 def build_menu(buttons, n_cols, header_buttons, footer_buttons):
-
     menu = [buttons[i:i + n_cols] for i in range(0, len(buttons), n_cols)]
 
     if header_buttons:

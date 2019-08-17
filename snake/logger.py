@@ -1,6 +1,6 @@
 import logging
-import colorlog
 
+import colorlog
 
 stream_handler = colorlog.StreamHandler()
 stream_handler.setFormatter(colorlog.ColoredFormatter())

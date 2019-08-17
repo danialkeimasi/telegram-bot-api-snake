@@ -1,15 +1,10 @@
-import os
-import sys
-
-from watchgod import run_process
-from snake.telebot import updater
 from snake import logger, logging
+from snake.telebot import updater
 
 logger.setLevel(logging.DEBUG)
 
 updater.start_polling()
 updater.idle()
-
 
 # def run():
 #     print('restarting')

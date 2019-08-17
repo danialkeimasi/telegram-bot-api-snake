@@ -1,8 +1,8 @@
-from telegram import ChatAction
 from functools import wraps
 
-import yaml
 import attrdict
+import yaml
+from telegram import ChatAction
 
 config = attrdict.AttrDict(yaml.safe_load(open("./config.yml", 'r')))
 
@@ -15,8 +15,10 @@ def send_action(action):
         def command_func(bot, update, *args, **kwargs):
             bot.send_chat_action(chat_id=update.effective_message.chat_id, action=action)
 
-            return func(bot, update,  *args, **kwargs)
+            return func(bot, update, *args, **kwargs)
+
         return command_func
+
     return decorator
 
 
@@ -29,6 +31,7 @@ def admin_only(func):
             return
 
         return func(bot, update, *args, **kwargs)
+
     return wrapped
 
 
