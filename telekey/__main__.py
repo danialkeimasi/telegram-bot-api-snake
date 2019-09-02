@@ -8,9 +8,9 @@ def cli():
 
 
 @cli.command()
-@click.argument('directory', type=click.Path(exists=True))
-def new(directory):
-    print(directory)
+@click.argument('botname', type=str)
+def newbot(botname):
+    print(os.getcwd())
     pass
 
 

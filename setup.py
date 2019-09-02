@@ -14,7 +14,7 @@ with open(os.path.join(HERE, "requirements.txt")) as fid:
 # This call to setup() does all the work
 setup(
     name="telekey",
-    version="0.1.2",
+    version="0.1.3",
     description="An Easy way to develop telegram bots",
     long_description=README,
     long_description_content_type="text/markdown",
