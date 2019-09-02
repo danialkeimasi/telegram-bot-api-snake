@@ -5,11 +5,15 @@ you can use telekey alongside [python-telegram-bot](https://github.com/python-te
 
 ## Installation
 
-You can install the Telekey [PyPI](https://pypi.org/project/telekey/):
+You can install the Telekey using [PyPI](https://pypi.org/project/telekey/):
 
     pip install telekey
 
-The telekey is supported Python 3.
+And you can create new project like this:
+
+    telekey newbot <project_name>
+    cd <project_name>
+
 
 ## How to use
 
