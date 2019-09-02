@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 import telegram
 from telegram import KeyboardButton, InlineKeyboardButton, ReplyKeyboardRemove
 
@@ -15,11 +17,15 @@ class Page:
         self.footer_buttons = footer_buttons
         self.n_cols = n_cols
 
-    @property
-    def markup(self):
+    def markup(self, context={}):
 
         full_list = self.botton_list + self.header_buttons + self.footer_buttons
-        menu = build_menu(self.botton_list, self.n_cols, self.header_buttons, self.footer_buttons)
+
+        botton_list = deepcopy(self.botton_list)
+        for i, item in enumerate(botton_list):
+            botton_list[i].text = item.text.format(**context)
+
+        menu = build_menu(botton_list, self.n_cols, self.header_buttons, self.footer_buttons)
 
         if full_list == []:
             return None
@@ -31,30 +37,26 @@ class Page:
         else:
             raise ValueError('there is more than one types of buttons!')
 
-    @property
-    def text_remove_keyboard(self):
+    def text_remove_keyboard(self, context={}):
         return {
-            'text': self.text,
+            'text': self.text.format(**context),
             'reply_markup': ReplyKeyboardRemove()
         }
 
-    @property
-    def caption_remove_keyboard(self):
+    def caption_remove_keyboard(self, context={}):
         return {
-            'text': self.text,
+            'caption': self.text.format(**context),
             'reply_markup': ReplyKeyboardRemove()
         }
 
-    @property
-    def text_markup(self):
+    def text_markup(self, context={}):
         return {
-            'text': self.text,
-            'reply_markup': self.markup
+            'text': self.text.format(**context),
+            'reply_markup': self.markup(context)
         }
 
-    @property
-    def caption_markup(self):
+    def caption_markup(self, context={}):
         return {
-            'caption': self.text,
-            'reply_markup': self.markup
+            'caption': self.text.format(**context),
+            'reply_markup': self.markup(context)
         }

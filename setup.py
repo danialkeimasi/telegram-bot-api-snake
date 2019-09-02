@@ -14,7 +14,7 @@ with open(os.path.join(HERE, "requirements.txt")) as fid:
 # This call to setup() does all the work
 setup(
     name="telekey",
-    version="0.1.5",
+    version="0.1.9",
     description="An Easy way to develop telegram bots",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -28,7 +28,6 @@ setup(
         "Programming Language :: Python :: 3",
     ],
     packages=["telekey"],
-    include_package_data=True,
     install_requires=REQUIREMENTS,
     entry_points={"console_scripts": ["telekey=telekey.__main__:main"]},
 )

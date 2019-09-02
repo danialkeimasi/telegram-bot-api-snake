@@ -15,7 +15,7 @@ def newbot(botname):
     project_dir = os.path.join(os.getcwd(), botname)
     if not os.path.isdir(project_dir):
         copy_tree(
-            os.path.join(os.path.abspath(os.path.dirname(__file__)), 'project'),
+            os.path.join(os.path.abspath(os.path.dirname(__file__)), 'telekeyproject'),
             os.path.join(os.getcwd(), botname)
         )
     else:
