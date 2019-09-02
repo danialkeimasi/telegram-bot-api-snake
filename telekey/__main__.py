@@ -1,7 +1,21 @@
+import os
+import click
+
+
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+@click.argument('directory', type=click.Path(exists=True))
+def new(directory):
+    print(directory)
+    pass
 
 
 def main():
-    print('not yet')
+    cli()
 
 if __name__ == "__main__":
     main()
