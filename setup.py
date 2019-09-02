@@ -28,6 +28,7 @@ setup(
         "Programming Language :: Python :: 3",
     ],
     packages=["telekey"],
+    include_package_data=True,
     install_requires=REQUIREMENTS,
     entry_points={"console_scripts": ["telekey=telekey.__main__:main"]},
 )
