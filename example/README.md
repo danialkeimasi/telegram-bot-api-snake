@@ -1,3 +1,3 @@
 # Examples
 
-- [message-tracker-bot](/message-tracker-bot)
+- [message-tracker-bot](/example/message-tracker-bot)
