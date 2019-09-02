@@ -9,7 +9,7 @@ You can install the Telekey [PyPI](https://pypi.org/project/telekey/):
 
     pip install telekey
 
-The reader is supported Python 3.
+The telekey is supported Python 3.
 
 ## How to use
 
